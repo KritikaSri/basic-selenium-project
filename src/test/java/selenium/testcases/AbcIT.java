@@ -10,7 +10,13 @@ public class AbcIT {
 	@Test
 	public void f() {
 		WebDriver webDriver = new RemoteWebDriver(DesiredCapabilities.firefox());
-		webDriver.get("http://www.python.org");
+		webDriver.get("http://www.google.com");
 		webDriver.getTitle();
+		String expectedTitle = "Google";
+		String actualTitle = null;
+		actualTitle = webDriver.getTitle();
+		Assert.assertTrue(actualTitle.contains(expectedTitle));
+		webDriver.quit();
+		System.out.println("Test completed--- Selenium");
 	}
 }
