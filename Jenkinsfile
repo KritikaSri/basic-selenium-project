@@ -4,7 +4,7 @@ pipeline {
   agent  {  
   	node { 
   		label 'selenium'
-  		customWorkspace '$HOME/jenkins_ws/ws1' 
+  		customWorkspace 'jenkins_ws/ws1' 
   	} 
   	
   }
